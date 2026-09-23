@@ -1,0 +1,190 @@
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --font-size: 18px;
+  --background: #FDFDFD;
+  --foreground: #011C30;
+  --card: #FDFDFD;
+  --card-foreground: #011C30;
+  --popover: #FDFDFD;
+  --popover-foreground: #011C30;
+  --primary: #011C30;
+  --primary-foreground: #FDFDFD;
+  --secondary: #011C30;
+  --secondary-foreground: #FDFDFD;
+  --muted: #011C30;
+  --muted-foreground: #FDFDFD;
+  --accent: #011C30;
+  --accent-foreground: #FDFDFD;
+  --destructive: #011C30;
+  --destructive-foreground: #FDFDFD;
+  --border: #011C30;
+  --input: #011C30;
+  --input-background: #FDFDFD;
+  --switch-background: #011C30;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --ring: #011C30;
+  --chart-1: #011C30;
+  --chart-2: #011C30;
+  --chart-3: #011C30;
+  --chart-4: #011C30;
+  --chart-5: #011C30;
+  --radius: 0;
+  --sidebar: #FDFDFD;
+  --sidebar-foreground: #011C30;
+  --sidebar-primary: #011C30;
+  --sidebar-primary-foreground: #FDFDFD;
+  --sidebar-accent: #FDFDFD;
+  --sidebar-accent-foreground: #011C30;
+  --sidebar-border: #011C30;
+  --sidebar-ring: #011C30;
+}
+
+.dark {
+  --background: #011C30;
+  --foreground: #FDFDFD;
+  --card: #011C30;
+  --card-foreground: #FDFDFD;
+  --popover: #011C30;
+  --popover-foreground: #FDFDFD;
+  --primary: #FDFDFD;
+  --primary-foreground: #011C30;
+  --secondary: #FDFDFD;
+  --secondary-foreground: #011C30;
+  --muted: #FDFDFD;
+  --muted-foreground: #011C30;
+  --accent: #FDFDFD;
+  --accent-foreground: #011C30;
+  --destructive: #FDFDFD;
+  --destructive-foreground: #011C30;
+  --border: #FDFDFD;
+  --input: #FDFDFD;
+  --ring: #FDFDFD;
+  --font-weight-medium: 500;
+  --font-weight-normal: 400;
+  --chart-1: #FDFDFD;
+  --chart-2: #FDFDFD;
+  --chart-3: #FDFDFD;
+  --chart-4: #FDFDFD;
+  --chart-5: #FDFDFD;
+  --sidebar: #011C30;
+  --sidebar-foreground: #FDFDFD;
+  --sidebar-primary: #FDFDFD;
+  --sidebar-primary-foreground: #011C30;
+  --sidebar-accent: #011C30;
+  --sidebar-accent-foreground: #FDFDFD;
+  --sidebar-border: #FDFDFD;
+  --sidebar-ring: #FDFDFD;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-input-background: var(--input-background);
+  --color-switch-background: var(--switch-background);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Roboto Mono', monospace;
+  }
+}
+
+/**
+ * Base typography. This is not applied to elements which have an ancestor with a Tailwind text class.
+ */
+@layer base {
+  :where(:not(:has([class*=" text-"]), :not(:has([class^="text-"])))) {
+    h1 {
+      font-size: 22px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h2 {
+      font-size: 22px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h3 {
+      font-size: 22px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    h4 {
+      font-size: 22px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    p {
+      font-size: 18px;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+
+    label {
+      font-size: 18px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    button {
+      font-size: 18px;
+      font-weight: var(--font-weight-medium);
+      line-height: 1.5;
+    }
+
+    input {
+      font-size: 18px;
+      font-weight: var(--font-weight-normal);
+      line-height: 1.5;
+    }
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
