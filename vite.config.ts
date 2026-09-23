@@ -24,6 +24,7 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
+  base: '/ollytype/',
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src/app'),
