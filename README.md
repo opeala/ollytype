@@ -9,3 +9,4 @@
 
   Run `npm run dev` to start the development server.
   
+  Run `npm run deploy` to trigger the deployment script to build the project and create/update the gh-pages branch automatically:
